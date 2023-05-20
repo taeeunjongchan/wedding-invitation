@@ -5,7 +5,7 @@ import Divider from "./atom/Divder.vue";
 <template>
   <div class="main_comment">
     <Divider />
-    <p class="poet">
+    <p :class="['poet', 'fade-in']">
       두 사람이 꽃과 나무처럼 걸어와서<br />
       서로의 모든 것이 되기 위해<br />
       오랜 기다림 끝에 혼례식을 치르는 날<br />
@@ -14,18 +14,20 @@ import Divider from "./atom/Divder.vue";
     </p>
   </div>
   <div class="invitation">
-    <div class="date">
-      <p>2023. 07. 01</p>
-      <p class="date_comment">새로운 시작에 초대합니다.</p>
+    <div class="fade-in">
+      <div class="date">
+        <p>2023. 07. 01</p>
+        <p class="date_comment">새로운 시작에 초대합니다.</p>
+      </div>
+      <p class="comment">
+        우리 두 사람, 단단한 사랑과 믿음으로<br />
+        서로 평생의 반려자가 되려합니다. <br />
+        큰 축복 가득 전해주시는<br />
+        그 따뜻함 마음 앞으로의 날들에 보태어<br />
+        아끼고 사랑하며 살겠습니다.
+      </p>
     </div>
-    <p class="comment">
-      우리 두 사람, 단단한 사랑과 믿음으로<br />
-      서로 평생의 반려자가 되려합니다. <br />
-      큰 축복 가득 전해주시는<br />
-      그 따뜻함 마음 앞으로의 날들에 보태어<br />
-      아끼고 사랑하며 살겠습니다.
-    </p>
-    <div class="names">
+    <div :class="['names', 'fade-in']">
       <p>조현기 · 강희경의 아들 &nbsp;<em>재국</em></p>
       <p>반송호 · 김미순의 &nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp; <em>가운</em></p>
     </div>

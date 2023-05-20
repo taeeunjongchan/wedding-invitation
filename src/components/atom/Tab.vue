@@ -18,8 +18,6 @@ button {
   font-family: "Nanum Myeongjo", serif;
   font-size: 16px;
   color: rgba(51, 51, 51, 0.8);
-  border: none;
-  background: none;
   padding-bottom: 10px;
 }
 

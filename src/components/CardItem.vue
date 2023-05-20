@@ -2,12 +2,12 @@
 defineProps<{
   title: string;
   description: string;
-  wide: boolean;
+  wide?: boolean;
 }>();
 </script>
 
 <template>
-  <div :class="['item', { wide }]">
+  <div :class="['item', 'fade-in', { wide }]">
     <div class="header">
       <p class="title">{{ title }}</p>
       <p class="description">{{ description }}</p>
@@ -24,6 +24,8 @@ defineProps<{
 <style scoped>
 .item {
   padding: 3rem 1rem;
+  opacity: 0.1;
+  transition: 0.4s all;
 }
 
 .item.wide {

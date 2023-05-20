@@ -2,11 +2,37 @@
 import CardItem from "./CardItem.vue";
 import Albums from "./Albums.vue";
 import Information from "./Information.vue";
-import EcosystemIcon from "./icons/IconEcosystem.vue";
-import CommunityIcon from "./icons/IconCommunity.vue";
-import SupportIcon from "./icons/IconSupport.vue";
 import MainVisual from "./MainVisual.vue";
 import MainComment from "./MainComment.vue";
+import Location from "./Location.vue";
+import Footer from "./Footer.vue";
+import ForYourHeart from "./ForYourHeart.vue";
+import { onMounted, onUnmounted } from "vue";
+import { isElemVisible } from "@/utils/common";
+
+var fadeInElements = [];
+
+onMounted(() => {
+  fadeInElements = Array.from(document.getElementsByClassName("fade-in"));
+  document.addEventListener("scroll", handleScroll);
+  handleScroll();
+});
+
+onUnmounted(() => {
+  document.removeEventListener("scroll", handleScroll);
+});
+
+function handleScroll() {
+  for (var i = 0; i < fadeInElements.length; i++) {
+    var elem = fadeInElements[i];
+    if (isElemVisible(elem, window.innerHeight)) {
+      elem.style.opacity = 1;
+      fadeInElements.splice(i, 1); // only allow it to run once
+    } else {
+      elem.style.opacity = 0.1;
+    }
+  }
+}
 </script>
 
 <template>
@@ -14,57 +40,31 @@ import MainComment from "./MainComment.vue";
 
   <MainComment />
 
-  <CardItem title="Gallery" description="기쁜 우리 젊은 날" :wide="true">
+  <CardItem
+    element-ref="card0"
+    title="Gallery"
+    description="기쁜 우리 젊은 날"
+    :wide="true"
+  >
     <Albums />
   </CardItem>
 
-  <CardItem title="Information" description="예식 안내"
+  <CardItem element-ref="card1" title="Information" description="예식 안내"
     ><Information />
   </CardItem>
 
-  <!--
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
+  <CardItem
+    element-ref="card2"
+    title="For Your Heart"
+    description="마음 전하실 곳"
+  >
+    <ForYourHeart />
+  </CardItem>
 
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
+  <CardItem element-ref="card3" title="Location" description="오시는 길">
+    <Location />
+  </CardItem>
 
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </WelcomeItem> -->
+  <Footer />
 </template>
+<style scoped></style>

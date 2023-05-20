@@ -32,10 +32,9 @@ img {
   padding-top: 10px;
 }
 .content :deep(p) {
-  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   color: rgba(34, 34, 34, 0.6);
 }
