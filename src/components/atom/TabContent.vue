@@ -1,0 +1,42 @@
+<script setup lang="ts">
+import { defineProps } from "vue";
+
+const props = defineProps({
+  img: String,
+  content: String,
+});
+
+function getImageUrl() {
+  // This path must be correct for your file
+  return new URL(`/src/assets/image/${props.img}`, import.meta.url);
+}
+</script>
+
+<template>
+  <div class="tab_content">
+    <img :src="getImageUrl()" />
+    <div class="content">
+      <p v-html="content"></p>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.tab_content {
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+.content {
+  padding-top: 10px;
+}
+.content :deep(p) {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(34, 34, 34, 0.6);
+}
+</style>
