@@ -77,6 +77,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  background: var(--color-background);
+}
+
 button {
   border: none;
   background: none;

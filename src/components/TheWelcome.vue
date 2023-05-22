@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import CardItem from "./CardItem.vue";
-import Albums from "./Albums.vue";
 import Information from "./Informations.vue";
 import MainVisual from "./MainVisual.vue";
 import MainComment from "./MainComment.vue";
@@ -9,6 +8,10 @@ import Footer from "./Footer.vue";
 import ForYourHeart from "./ForYourHeart.vue";
 import { onMounted, onUnmounted } from "vue";
 import { isElemVisible } from "../utils/common";
+import { defineAsyncComponent } from "vue";
+
+// simple usage
+const Albums = defineAsyncComponent(() => import("./Albums.vue"));
 
 var fadeInElements: any[] = [];
 

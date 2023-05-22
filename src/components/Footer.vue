@@ -21,6 +21,7 @@
   padding: 80px 0;
   background: url("../assets/image/pic5.png") no-repeat center center / cover;
   color: #fff;
+  margin-bottom: 80px;
 }
 .footer .title {
   margin-bottom: 20px;
