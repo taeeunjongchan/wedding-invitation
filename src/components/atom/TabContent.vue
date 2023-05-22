@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
-
 const props = defineProps({
   img: String,
   content: String,
@@ -8,7 +6,7 @@ const props = defineProps({
 
 function getImageUrl() {
   // This path must be correct for your file
-  return new URL(`/src/assets/image/${props.img}`, import.meta.url);
+  return new URL(`/src/assets/image/${props.img}`, import.meta.url)?.toString();
 }
 </script>
 

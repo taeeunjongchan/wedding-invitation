@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
-
 const props = defineProps({
   type: String,
   link: String,
@@ -11,7 +9,7 @@ function getImageUrl() {
   return new URL(
     `/src/assets/image/icon_map_${props.type}.png`,
     import.meta.url
-  );
+  ).toString();
 }
 </script>
 

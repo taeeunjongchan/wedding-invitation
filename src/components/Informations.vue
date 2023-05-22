@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import Tab from "./atom/Tab.vue";
 import Tabs from "./atom/Tabs.vue";
@@ -10,7 +11,8 @@ const flickingContainer = ref(null);
 
 function changeTab(index: number) {
   activeIndex.value = index;
-  flickingContainer.value.moveTo(index, 500);
+  const flicking: any = flickingContainer.value;
+  flicking?.moveTo(index, 500);
 }
 
 const titles = ["장소 안내", "식사 안내", "주차 안내"];
@@ -21,7 +23,7 @@ const contents = [
 ];
 const plugins = [new Fade()];
 
-function onChanged({ index }) {
+function onChanged({ index }: { index: number }) {
   activeIndex.value = index;
 }
 </script>
@@ -34,7 +36,7 @@ function onChanged({ index }) {
         <Tab
           v-for="(title, index) in titles"
           :key="index"
-          :class="['tab_button', { active: isActive }]"
+          :class="['tab_button']"
           :title="title"
           :isActive="index === activeIndex"
           @click="changeTab(index)"

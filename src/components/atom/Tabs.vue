@@ -1,8 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 defineProps<{
-  title: string;
-  description: string;
-  wide: boolean;
+  title?: string;
+  description?: string;
+  wide?: boolean;
 }>();
 </script>
 

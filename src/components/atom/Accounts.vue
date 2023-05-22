@@ -1,6 +1,5 @@
-<script setup lang="ts">
-import { defineProps } from "vue";
 
+<script setup lang="ts">
 const props = defineProps({
   title: String,
 });

@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import CardItem from "./CardItem.vue";
 import Albums from "./Albums.vue";
-import Information from "./Information.vue";
+import Information from "./Informations.vue";
 import MainVisual from "./MainVisual.vue";
 import MainComment from "./MainComment.vue";
 import Location from "./Location.vue";
 import Footer from "./Footer.vue";
 import ForYourHeart from "./ForYourHeart.vue";
 import { onMounted, onUnmounted } from "vue";
-import { isElemVisible } from "@/utils/common";
+import { isElemVisible } from "../utils/common";
 
-var fadeInElements = [];
+var fadeInElements: any[] = [];
 
 onMounted(() => {
   fadeInElements = Array.from(document.getElementsByClassName("fade-in"));
