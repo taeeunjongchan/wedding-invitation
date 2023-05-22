@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import img from "../assets/image/main_visual.png";
+import img from "../assets/image/main_visual.jpg";
 </script>
 
 <template>

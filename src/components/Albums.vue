@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import pic1 from "../assets/image/pic1.jpeg";
-import pic2 from "../assets/image/pic2.jpeg";
+import pic1 from "../assets/image/pic1.jpg";
+import pic2 from "../assets/image/pic2.jpg";
 import pic4 from "../assets/image/pic4.png";
 </script>
 
