@@ -32,7 +32,7 @@ img {
 .content :deep(p) {
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 24px;
   color: rgba(34, 34, 34, 0.6);
 }

@@ -10,8 +10,11 @@ import { onMounted, onUnmounted } from "vue";
 import { isElemVisible } from "../utils/common";
 import { defineAsyncComponent } from "vue";
 
-// simple usage
 const Albums = defineAsyncComponent(() => import("./Albums.vue"));
+
+const props = defineProps({
+  type: String,
+});
 
 var fadeInElements: any[] = [];
 
@@ -41,7 +44,7 @@ function handleScroll() {
 <template>
   <MainVisual />
 
-  <MainComment />
+  <MainComment :type="props.type" />
 
   <CardItem
     element-ref="card0"
@@ -65,7 +68,7 @@ function handleScroll() {
   </CardItem>
 
   <CardItem element-ref="card3" title="Location" description="오시는 길">
-    <Location />
+    <Location :type="props.type" />
   </CardItem>
 
   <Footer />

@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 const props = defineProps({
   title: String,
@@ -12,7 +11,7 @@ const props = defineProps({
 </template>
 <style scoped>
 .accounts {
-  margin: 40px 0;
+  margin: 40px 0.5rem;
 }
 
 .accounts .title {

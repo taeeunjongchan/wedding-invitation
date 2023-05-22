@@ -43,6 +43,6 @@ defineProps<{
   line-height: 25px;
 }
 .header .description {
-  color: var(--vt-c-black-mute);
+  color: var(--vt-c-black-soft);
 }
 </style>

@@ -31,24 +31,28 @@ import img from "../assets/image/main_visual.jpg";
   font-family: "Nanum Myeongjo", serif;
   text-align: center;
   color: var(--vt-c-white);
+  min-height: 500px;
 }
 .main_visual img {
   width: 100%;
 }
 .titles {
   position: absolute;
-  top: 60px;
+  top: 70px;
   left: 30px;
   right: 30px;
   display: flex;
   justify-content: space-between;
 
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bolder;
   line-height: 50px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
 }
-
+.title_left {
+  text-align: left;
+}
 .title_right {
   writing-mode: vertical-lr;
 }

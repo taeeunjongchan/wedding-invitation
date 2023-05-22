@@ -1,11 +1,15 @@
 <script setup lang="ts">
 const props = defineProps({
   title: String,
+  emphasis: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
 <template>
-  <div class="location_text">
+  <div :class="['location_text', { emphasis }]">
     <p class="title">{{ props.title }}</p>
     <slot></slot>
   </div>
@@ -18,6 +22,10 @@ const props = defineProps({
   margin: 5px 0;
   font-size: 14px;
   color: var(--vt-c-black-mute);
+}
+
+.location_text.emphasis {
+  background-color: var(--vt-c-beige);
 }
 .title {
   font-family: "Nanum Myeongjo", serif;

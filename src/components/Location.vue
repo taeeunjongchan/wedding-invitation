@@ -3,6 +3,9 @@ import KakaoMap from "./atom/KakaoMap.vue";
 import LocationButton from "./atom/LocationButton.vue";
 import LocationText from "./atom/LocationText.vue";
 import TextCopy from "./atom/TextCopy.vue";
+const props = defineProps({
+  type: String,
+});
 </script>
 
 <template>
@@ -25,9 +28,31 @@ import TextCopy from "./atom/TextCopy.vue";
     >
   </div>
   <div class="text_locations">
+    <LocationText
+      v-if="props.type === 'parents-gaun'"
+      title="부산 출발 하객 버스"
+      emphasis
+    >
+      <p>
+        *인원 체크를 위해, 하객버스 탑승을 원하시는 분은 사전에 꼭 연락 주시길
+        바랍니다.
+      </p>
+      <br />
+      <p>탑승 장소 | 만덕역 8번 출구</p>
+      <p>탑승 시간 | 2023년 7월 1일 오전 10시 30분</p>
+      <p>탑승 대표 | 반동욱 010-5668-9441</p>
+    </LocationText>
+    <LocationText
+      v-if="props.type === 'parents-jaekuk'"
+      title="교회 출발 하객 버스"
+      emphasis
+    >
+      <p>탑승 장소 | 풍동교회</p>
+      <p>탑승 시간 | 2023년 7월 1일 오후 2시</p>
+    </LocationText>
     <LocationText title="자가용">
       <p>
-        하객 무료주차는 2시간 제공 해드립니다. <br />호텔 도보 5분 거리의
+        하객 무료주차는 2시간 제공합니다. <br />호텔 도보 5분 거리의
         ‘을지트윈타워 지하주차장 (B5 ~ B6)’을 이용바랍니다.
       </p>
     </LocationText>
