@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import img from "../assets/image/main_visual.jpg";
+import img2 from "../assets/image/main_2.jpg";
+const props = defineProps({
+  type: String,
+});
 </script>
 
 <template>
-  <div class="main_visual">
+  <div :class="['main_visual', props.type]">
     <div class="details">
-      <img :src="img" />
+      <img :src="props.type === 'parents-gaun' ? img2 : img" />
     </div>
     <div class="titles">
       <div class="title_left">
@@ -33,6 +37,7 @@ import img from "../assets/image/main_visual.jpg";
   color: var(--vt-c-white);
   min-height: 500px;
 }
+
 .main_visual img {
   width: 100%;
 }
@@ -50,6 +55,15 @@ import img from "../assets/image/main_visual.jpg";
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   letter-spacing: 3px;
 }
+
+.parents-gaun .titles {
+  top: 30px;
+  left: 20px;
+  right: 20px;
+  font-size: 23px;
+  line-height: 40px;
+}
+
 .title_left {
   text-align: left;
 }

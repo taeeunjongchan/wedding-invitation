@@ -42,7 +42,7 @@ function handleScroll() {
 </script>
 
 <template>
-  <MainVisual />
+  <MainVisual :type="props.type" />
 
   <MainComment :type="props.type" />
 
@@ -52,7 +52,7 @@ function handleScroll() {
     description="기쁜 우리 젊은 날"
     :wide="true"
   >
-    <Albums />
+    <Albums :type="props.type" />
   </CardItem>
 
   <CardItem element-ref="card1" title="Information" description="예식 안내"
