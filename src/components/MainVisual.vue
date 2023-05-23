@@ -20,7 +20,7 @@ import img from "../assets/image/main_visual.jpg";
         We are lucky in having found the perfect partner to spend our life
         with.<br />
       </small>
-      <small>2023. 07. 01</small>
+      <small>2023. 07. 01 PM 04:00</small>
     </div>
   </div>
 </template>

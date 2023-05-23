@@ -34,8 +34,9 @@ if (props.type === "parents-gaun") {
   <div :class="['invitation', type]">
     <div class="fade-in">
       <div class="date">
-        <p>2023. 07. 01</p>
         <p class="date_comment" v-html="title"></p>
+        <p>2023. 07. 01 오후 4시</p>
+        <p>PJ호텔 뮤즈홀</p>
       </div>
       <p class="comment" v-html="description"></p>
     </div>
@@ -70,7 +71,7 @@ if (props.type === "parents-gaun") {
 }
 
 .invitation .date {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--vt-c-beige-dark);
 }
 
