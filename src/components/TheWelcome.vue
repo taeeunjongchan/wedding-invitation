@@ -55,9 +55,9 @@ function handleScroll() {
     <Albums :type="props.type" />
   </CardItem>
 
-  <CardItem element-ref="card1" title="Information" description="예식 안내"
+  <!-- <CardItem element-ref="card1" title="Information" description="예식 안내"
     ><Information />
-  </CardItem>
+  </CardItem> -->
 
   <CardItem
     element-ref="card2"
