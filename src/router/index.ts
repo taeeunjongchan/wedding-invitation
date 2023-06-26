@@ -13,19 +13,19 @@ const router = createRouter({
       },
     },
     {
-      path: "/parents-jaekuk",
-      name: "parents-jaekuk",
+      path: "/parents-wonseon",
+      name: "parents-wonseon",
       component: HomeView,
       props: {
-        type: "parents-jaekuk",
+        type: "parents-wonseon",
       },
     },
     {
-      path: "/parents-gaun",
-      name: "parents-gaun",
+      path: "/parents-eunmi",
+      name: "parents-eunmi",
       component: HomeView,
       props: {
-        type: "parents-gaun",
+        type: "parents-eunmi",
       },
     },
   ],

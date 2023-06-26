@@ -40,11 +40,13 @@
   left: 0;
   right: 0;
   height: 272px;
-  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .bg {
-  opacity: 0.5;
+  opacity: 0.2;
   height: 100%;
   background: #333;
   position: absolute;
