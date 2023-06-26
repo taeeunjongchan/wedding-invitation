@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import img from "../assets/image/main_visual.jpg";
-import img2 from "../assets/image/main_2.jpg";
+import img from "../assets/image/info1.png";
 const props = defineProps({
   type: String,
 });
@@ -8,23 +7,18 @@ const props = defineProps({
 
 <template>
   <div :class="['main_visual', props.type]">
-    <div class="details">
-      <img :src="props.type === 'parents-gaun' ? img2 : img" />
-    </div>
+    <img :src="img" />
     <div class="titles">
-      <div class="title_left">
-        <p>조재국<br />반가운</p>
+      <div class="subtitle">
+        <p>Wedding Invitation</p>
       </div>
-      <div class="title_right">
-        <p>결혼합니다</p>
+      <div class="title">
+        <p>YOO WONSEON<br />KIM EUNMI</p>
       </div>
     </div>
     <div class="bottom">
-      <small>
-        We are lucky in having found the perfect partner to spend our life
-        with.<br />
-      </small>
-      <small>2023. 07. 01 PM 04:00</small>
+      <small> 2023.09.03 PM 05:00<br /> </small>
+      <small>Apelgamo Banpo</small>
     </div>
   </div>
 </template>
@@ -39,15 +33,18 @@ const props = defineProps({
 }
 
 .main_visual img {
-  width: 100%;
+  width: auto;
+  min-height: 500px;
+  max-height: 80vh;
+  transform: translateX(-50%);
+  margin-left: 50%;
 }
 .titles {
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 30px;
   right: 30px;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
 
   font-size: 30px;
   font-weight: bolder;
@@ -56,25 +53,15 @@ const props = defineProps({
   letter-spacing: 3px;
 }
 
-.parents-gaun .titles {
-  top: 30px;
-  left: 20px;
-  right: 20px;
-  font-size: 23px;
-  line-height: 40px;
-}
-
-.title_left {
-  text-align: left;
-}
-.title_right {
-  writing-mode: vertical-lr;
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .bottom {
   position: absolute;
   bottom: 30px;
-  font-size: 10px;
+  font-size: 20px;
   width: 100%;
 }
 

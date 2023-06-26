@@ -6,10 +6,10 @@ const props = defineProps({
 });
 
 let openingComment =
-  "두 사람이 꽃과 나무처럼 걸어와서<br />서로의 모든 것이 되기 위해<br />오랜 기다림 끝에 혼례식을 치르는 날<br />세상은 더욱 아름다워라<br /><br />이해인, <사랑의 사람들이여>";
+  "깊어져요, 우리,<br/>시간과 함께 낡아지지 말고.<br/>우리의 사랑도 그렇게 될 수 있도록 기억하기로 해요.<br/>오랜 시간을 함께한다는 것의 가치를. 그 힘을.<br /><br />정현주, <그래도 사랑>";
 let title = "초대합니다.";
 let description =
-  "우리 두 사람, 단단한 사랑과 믿음으로<br />서로 평생의 반려자가 되려합니다. <br />큰 축복 가득 전해주시는<br />그 따뜻한 마음 앞으로의 날들에 보태어<br />아끼고 사랑하며 살겠습니다.";
+  "다가오는 9월,<br/>다른 공간, 다른 시간을 걷던 두 사람이<br/>서로를 마주한 이후<br/>같은 공간, 같은 시간을 꿈꾸며 걷게 되었습니다.<br/>부디 귀한 발걸음 하시어<br/>앞날을 축복해 주시면 더없이 감사하겠습니다.";
 
 if (props.type === "parents-jaekuk") {
   openingComment =
@@ -35,14 +35,14 @@ if (props.type === "parents-gaun") {
     <div class="fade-in">
       <div class="date">
         <p class="date_comment" v-html="title"></p>
-        <p>2023. 07. 01 오후 4시</p>
-        <p>PJ호텔 뮤즈홀</p>
+        <p>2023.09.03 오후 5시</p>
+        <p>아펠가모 반포</p>
       </div>
       <p class="comment" v-html="description"></p>
     </div>
     <div :class="['names', 'fade-in']">
-      <p>조현기 · 강희경의 아들 &nbsp;<em>재국</em></p>
-      <p>반송호 · 김미순의 &nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp; <em>가운</em></p>
+      <p>유선배 · 최영희의 아들 &nbsp;<em>유원선</em></p>
+      <p>김인환 · 이명숙의 &nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp; <em>김은미</em></p>
     </div>
   </div>
 </template>
@@ -50,7 +50,7 @@ if (props.type === "parents-gaun") {
 <style scoped>
 .main_comment,
 .invitation {
-  padding: 2rem;
+  padding: 1.5rem;
   position: relative;
   font-family: "Nanum Myeongjo", serif;
   text-align: center;

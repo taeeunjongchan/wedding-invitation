@@ -4,47 +4,32 @@ import Accounts from "./atom/Accounts.vue";
 </script>
 
 <template>
-  <Accounts title="신랑측 계좌번호">
-    <TextCopy class="text_copy" copy-text="1002449222601">
+  <Accounts>
+    <TextCopy v-if="false" class="text_copy" copy-text="1002449222601">
       <slot>
         <p>아버지 <em>조현기</em></p>
         <p>우리은행 1002-449-222601</p>
       </slot>
     </TextCopy>
-    <div class="divider" />
-    <TextCopy class="text_copy" copy-text="110385135659">
+    <div v-if="false" class="divider" />
+    <TextCopy v-if="false" class="text_copy" copy-text="110385135659">
       <slot>
         <p>어머니 <em>강희경</em></p>
         <p>신한은행 110-385-135-659</p>
       </slot>
     </TextCopy>
-    <div class="divider" />
-    <TextCopy class="text_copy" copy-text="1002647525700">
+    <div v-if="false" class="divider" />
+    <TextCopy class="text_copy" copy-text="61302302101011">
       <slot>
-        <p>신랑 <em>조재국</em></p>
-        <p>우리은행 1002-647-525700</p>
-      </slot>
-    </TextCopy>
-  </Accounts>
-  <Accounts title="신부측 계좌번호">
-    <TextCopy class="text_copy" copy-text="9003206317247">
-      <slot>
-        <p>아버지 <em>반송호</em></p>
-        <p>새마을금고 9003206317247</p>
+        <p>신랑 <em>유원선</em></p>
+        <p>기업은행 613-023021-01011</p>
       </slot>
     </TextCopy>
     <div class="divider" />
-    <TextCopy class="text_copy" copy-text="3560442269423">
+    <TextCopy class="text_copy" copy-text="110510162323">
       <slot>
-        <p>어머니 <em>김미순</em></p>
-        <p>농협은행 3560442269423</p>
-      </slot>
-    </TextCopy>
-    <div class="divider" />
-    <TextCopy class="text_copy" copy-text="110445811287">
-      <slot>
-        <p>신부 <em>반가운</em></p>
-        <p>신한은행 110-445-811-287</p>
+        <p>신부 <em>김은미</em></p>
+        <p>신한은행 110-510-162323</p>
       </slot>
     </TextCopy>
   </Accounts>
