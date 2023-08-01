@@ -12,12 +12,12 @@ const showLayer = (picture: string) => {
 const closeLayer = () => showLayerImage.value = false;
 const pictures =  Object.keys(import.meta.glob("@/assets/image/albums/*")).sort((a, b) => {
         return numberOf(a) - numberOf(b);
-    });
+    }).map(picture => new URL(picture, import.meta.url));
 </script>
 
 <template>
   <div class="albums">
-    <img v-for="(picture, index) in pictures" :key="`pic_${index}`" :src="picture" @click="showLayer(picture)"/>
+    <img v-for="(picture, index) in pictures" :key="`pic_${index}`" :src="picture" @click="showLayer(picture.toString())"/>
   </div>
   <LayerImage v-if="showLayerImage" :image="pickedImage" @wheel.prevent @touchmove.prevent @scroll.prevent @close="closeLayer"/>
 </template>
