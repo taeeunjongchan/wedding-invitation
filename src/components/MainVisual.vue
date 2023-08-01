@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import img from "../assets/image/info1.png";
+import img from "../assets/image/main.png";
 const props = defineProps({
   type: String,
 });

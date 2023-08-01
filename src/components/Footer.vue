@@ -20,7 +20,7 @@
   font-family: "Nanum Myeongjo", serif;
   text-align: center;
   padding: 80px 0;
-  background: url("../assets/image/info1.png") no-repeat center center / cover;
+  background: url("../assets/image/footer.png") no-repeat center center / cover;
   color: #fff;
   height: 272px;
   position: relative;

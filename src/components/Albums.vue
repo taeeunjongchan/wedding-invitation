@@ -1,20 +1,25 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-// import pic1 from "../assets/image/pic1.jpg";
-// import pic2 from "../assets/image/pic2.jpg";
-// import pic4 from "../assets/image/pic4.png";
+import { ref } from "vue";
+import LayerImage from "./LayerImage.vue";
 
-const props = defineProps({
-  type: String,
-});
+const numberOf = (text: string) => Number(text.replace("/src/assets/image/albums/", "").replace(".jpg",""));
+const showLayerImage = ref(false), pickedImage = ref("");
+const showLayer = (picture: string) => {
+  showLayerImage.value = true;
+  pickedImage.value = picture
+}
+const closeLayer = () => showLayerImage.value = false;
+const pictures =  Object.keys(import.meta.glob("@/assets/image/albums/*")).sort((a, b) => {
+        return numberOf(a) - numberOf(b);
+    });
 </script>
 
 <template>
   <div class="albums">
-    <!-- <img :src="pic4" />
-    <img :src="pic2" />
-    <img :src="pic1" /> -->
+    <img v-for="(picture, index) in pictures" :key="`pic_${index}`" :src="picture" @click="showLayer(picture)"/>
   </div>
+  <LayerImage v-if="showLayerImage" :image="pickedImage" @wheel.prevent @touchmove.prevent @scroll.prevent @close="closeLayer"/>
 </template>
 
 <style scoped>
@@ -23,7 +28,8 @@ const props = defineProps({
   padding: 1rem;
 }
 .albums img {
-  width: 100%;
+  margin-right: 4px;
+  width: calc(50% - 4px);
   height: auto;
   border-radius: 3px;
   transition: 0.7s all;
