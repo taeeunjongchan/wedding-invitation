@@ -53,6 +53,7 @@ function handleScroll() {
     :wide="true"
   >
     <Albums :type="props.type" />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NFadV6-FVjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </CardItem>
 
   <!-- <CardItem element-ref="card1" title="Information" description="예식 안내"
@@ -73,4 +74,12 @@ function handleScroll() {
 
   <Footer />
 </template>
-<style scoped></style>
+<style scoped>
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
+</style>
