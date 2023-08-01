@@ -3,21 +3,21 @@
 import { ref } from "vue";
 import LayerImage from "./LayerImage.vue";
 
-const numberOf = (text: string) => Number(text.replace("/src/assets/image/albums/", "").replace(".jpg",""));
 const showLayerImage = ref(false), pickedImage = ref("");
-const showLayer = (picture: string) => {
+const showLayer = (index: number) => {
   showLayerImage.value = true;
-  pickedImage.value = picture
+  pickedImage.value = pictureOf(index);
 }
 const closeLayer = () => showLayerImage.value = false;
-const pictures =  Object.keys(import.meta.glob("@/assets/image/albums/*", { eager: true })).sort((a, b) => {
-        return numberOf(a) - numberOf(b);
-    }).map(picture => new URL(picture, import.meta.url).href);
+const pictureOf = (index: number) => {
+  return new URL(`/src/assets/image/albums/${index}.png`, import.meta.url).href;
+};
+
 </script>
 
 <template>
   <div class="albums">
-    <img v-for="(picture, index) in pictures" :key="`pic_${index}`" :src="picture" @click="showLayer(picture)"/>
+    <img v-for="index in 20" :key="`pic_${index}`" :src="pictureOf(index)" @click="showLayer(index)"/>
   </div>
   <LayerImage v-if="showLayerImage" :image="pickedImage" @wheel.prevent @touchmove.prevent @scroll.prevent @close="closeLayer"/>
 </template>
