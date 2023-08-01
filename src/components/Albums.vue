@@ -43,6 +43,7 @@ const pictureOf = (index: number, prefix: string) => {
   flex-direction: column;
   justify-content: center;
   float: left;
+  cursor: pointer;
 }
 
 @media (min-width: 580px) {

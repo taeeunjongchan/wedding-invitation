@@ -40,7 +40,7 @@ defineProps<{
 }
 
 .layer_image {
-    width: fit-content;
+    width: auto;
     height: 100%;
     margin: 0 auto;
 }
