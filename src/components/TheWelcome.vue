@@ -76,10 +76,18 @@ function handleScroll() {
 </template>
 <style scoped>
 iframe {
-    display: block;       /* iframes are inline by default */
-    background: #000;
-    border: none;         /* Reset default border */
-    height: 100vh;        /* Viewport-relative units */
+    display: block;       
+    border: none;        
+    height: 90vh;        
     width: 100vw;
+    padding-top: 20px;
 }
+
+@media (min-width: 580px) {
+  iframe {
+    height: 100vh;        
+    width: 100%;
+  }
+}
+
 </style>
