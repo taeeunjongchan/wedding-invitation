@@ -17,7 +17,7 @@ const pictureOf = (index: number) => {
 
 <template>
   <div class="albums">
-    <img v-for="index in 20" :key="`pic_${index}`" :src="pictureOf(index)" @click="showLayer(index)"/>
+    <img v-for="index in 20" :key="`pic_${index}`" v-lazy="{src: pictureOf(index)}" @click="showLayer(index)"/>
   </div>
   <LayerImage v-if="showLayerImage" :image="pickedImage" @wheel.prevent @touchmove.prevent @scroll.prevent @close="closeLayer"/>
 </template>
