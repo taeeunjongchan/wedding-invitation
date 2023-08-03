@@ -13,7 +13,7 @@ const props = defineProps({
         <p>Wedding Invitation</p>
       </div>
       <div class="title">
-        <p>YOO WONSEON<br />KIM EUNMI</p>
+        <p>KIM EUNMI<br />YOO WONSEON</p>
       </div>
     </div>
     <div class="bottom">
@@ -49,7 +49,6 @@ const props = defineProps({
   font-size: 30px;
   font-weight: bolder;
   line-height: 50px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   letter-spacing: 3px;
 }
 

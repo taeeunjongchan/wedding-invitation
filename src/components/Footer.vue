@@ -26,7 +26,7 @@
   position: relative;
 }
 .footer .title {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .footer .copy {
   font-size: 10px;
@@ -36,12 +36,12 @@
 .texts {
   z-index: 2;
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   right: 0;
   height: 272px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
 }
 

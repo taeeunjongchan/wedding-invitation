@@ -48,9 +48,19 @@ async function onClick() {
   font-weight: bold;
   padding: 5px 7px;
   border-radius: 7px;
+  font-size: 18px;
+  min-width: 64px;
 }
 .icon_copy {
   width: 16px;
   margin-right: 2px;
+  margin-top: 3px;
+}
+
+.default .btn_copy {
+  font-size: 13px;
+}
+.default .icon_copy {
+  margin-top: 0;
 }
 </style>

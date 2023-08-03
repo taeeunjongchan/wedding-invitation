@@ -41,7 +41,7 @@ let description =
       <p class="comment" v-html="description"></p>
     </div>
     <div :class="['names', 'fade-in']">
-      <p>유선배 · 최영희의 아들 &nbsp;<em>유원선</em></p>
+      <p>유선배 · 최영희의 아들 &nbsp;&nbsp;<em>유원선</em></p>
       <p>김인환 · 이명숙의 &nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp; <em>김은미</em></p>
     </div>
   </div>
@@ -57,17 +57,12 @@ let description =
   line-height: 2rem;
   color: var(--vt-c-black-soft);
   font-weight: 400;
-  text-align: left;
+  text-align: center;
 }
 
 .invitation {
   padding: 4rem 2rem;
   background-color: var(--vt-c-beige);
-}
-
-.main_comment.default,
-.invitation.default {
-  text-align: center;
 }
 
 .invitation .date {
@@ -84,7 +79,7 @@ let description =
 }
 
 .names p {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Nanum Myeongjo", serif;
   color: var(--vt-c-beige-dark);
   font-weight: 500;
   line-height: 25px;

@@ -4,6 +4,10 @@ import { ref } from "vue";
 import LayerImage from "./LayerImage.vue";
 import LoadingGif from "@/assets/image/load-loading.gif";
 
+const props = defineProps({
+  type: String,
+});
+
 const showLayerImage = ref(false), pickedImage = ref("");
 const showLayer = (index: number) => {
   showLayerImage.value = true;
@@ -14,11 +18,12 @@ const pictureOf = (index: number, prefix: string) => {
   return new URL(`/src/assets/image/albums/${prefix}${index}.png`, import.meta.url).href;
 };
 
+const albumCounts = props.type === 'default' ? Array.from({length: 20}, (v, k) => k+1) : [2,3,4,6,8,9,13,15,17,18]
 </script>
 
 <template>
   <div class="albums">
-    <div class="picture" v-for="index in 20" :key="`pic_${index}`">
+    <div class="picture" v-for="index in albumCounts" :key="`pic_${index}`">
       <img v-lazy="{src: pictureOf(index, 'resize_'), loading: LoadingGif}" @click="showLayer(index)"/>
     </div>
   </div>
@@ -30,26 +35,22 @@ const pictureOf = (index: number, prefix: string) => {
   width: 100%;
   padding: 1rem;
   margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* row-gap: 4px; */
+  column-gap: 4px;
 }
 .albums .picture {
-  margin-right: 4px;
-  margin-bottom: 4px;
-  width: calc(50% - 4px);
   min-height: 250px;
   height: auto;
   border-radius: 3px;
   transition: 0.7s all;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  float: left;
   cursor: pointer;
 }
 
-@media (min-width: 580px) {
-  .albums img {
-    object-fit: contain;
-  }
+.albums img {
+  object-fit: contain;
+  width: 100%;
 }
 
 img[lazy=loading] {

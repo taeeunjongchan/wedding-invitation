@@ -47,9 +47,10 @@ function handleScroll() {
   <MainComment :type="props.type" />
 
   <CardItem
+    v-if="type === 'default'"
     element-ref="card0"
     title="Gallery"
-    description="기쁜 우리 젊은 날"
+    description="제주도 촬영"
     :wide="true"
   >
     <Albums :type="props.type" />
@@ -70,6 +71,18 @@ function handleScroll() {
 
   <CardItem element-ref="card3" title="Location" description="오시는 길">
     <Location :type="props.type" />
+  </CardItem>
+
+  <CardItem
+    v-if="type !== 'default'"
+    element-ref="card0"
+    title="Gallery"
+    description="제주도 촬영"
+    :wide="true"
+    :style="{paddingBottom: 0}"
+  >
+    <Albums :type="props.type" />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NFadV6-FVjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </CardItem>
 
   <Footer />
