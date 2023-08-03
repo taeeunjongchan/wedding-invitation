@@ -13,7 +13,7 @@ const props = defineProps({
       <slot>
         <div :class="['texts', type]">
           <p><em>신랑 아버지 유선배</em></p>
-          <p>우리은행 203-070160-12001</p>
+          <p class="account">우리은행 203-070160-12001</p>
         </div>
       </slot>
     </TextCopy>
@@ -22,7 +22,7 @@ const props = defineProps({
       <slot>
         <div :class="['texts', type]">
           <p><em>신랑 어머니 최영희</em></p>
-          <p>농협은행 167-01-389775</p>
+          <p class="account">농협은행 167-01-389775</p>
         </div>
       </slot>
     </TextCopy>
@@ -32,7 +32,7 @@ const props = defineProps({
       <slot>
         <div :class="['texts', type]">
           <p><em>신부 아버지 김인환</em></p>
-          <p>하나은행 268-810043-85207</p>
+          <p class="account">하나은행 268-810043-85207</p>
         </div>
       </slot>
     </TextCopy>
@@ -41,7 +41,7 @@ const props = defineProps({
       <slot>
         <div :class="['texts', type]">
           <p><em>신부 어머니 이명숙</em></p>
-          <p>국민은행 446002-88-116648</p>
+          <p class="account">국민은행 446002-88-116648</p>
         </div>
       </slot>
     </TextCopy>
@@ -51,7 +51,7 @@ const props = defineProps({
       <slot>
         <div :class="['texts', type]">
           <p>신랑 <em>유원선</em></p>
-          <p>기업은행 613-023021-01011</p>
+          <p class="account">기업은행 613-023021-01011</p>
         </div>
       </slot>
     </TextCopy>
@@ -60,7 +60,7 @@ const props = defineProps({
       <slot>
         <div :class="['texts', type]">
           <p>신부 <em>김은미</em></p>
-          <p>신한은행 110-510-162323</p>
+          <p class="account">신한은행 110-510-162323</p>
         </div>
       </slot>
     </TextCopy>
@@ -89,7 +89,11 @@ const props = defineProps({
   font-size: 20px;
 }
 
+.texts .account {
+  font-size: 17px;
+}
+
 .texts.default {
-  font-size: 13px;
+  font-size: 13px !important;
 }
 </style>

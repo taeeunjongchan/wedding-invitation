@@ -60,7 +60,7 @@ const props = defineProps({
 }
 
 .btn_locations .text {
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .location_copy.default, .btn_locations.default .text, .text_locations.default .text {

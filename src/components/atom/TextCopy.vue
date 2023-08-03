@@ -48,7 +48,7 @@ async function onClick() {
   font-weight: bold;
   padding: 5px 7px;
   border-radius: 7px;
-  font-size: 18px;
+  font-size: 17px;
   min-width: 64px;
 }
 .icon_copy {
