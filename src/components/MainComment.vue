@@ -50,7 +50,7 @@ let description =
 <style scoped>
 .main_comment,
 .invitation {
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   position: relative;
   font-family: "Nanum Myeongjo", serif;
   text-align: center;
@@ -58,6 +58,7 @@ let description =
   color: var(--vt-c-black-soft);
   font-weight: 400;
   text-align: center;
+  letter-spacing: -0.5px;
 }
 
 .invitation {
