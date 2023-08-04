@@ -86,14 +86,19 @@ const props = defineProps({
 }
 
 .texts {
-  font-size: 20px;
+  font-size: 15px;
+  font-family: "Nanum Myeongjo", serif;
 }
 
 .texts .account {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .texts.default {
+  font-size: 13px !important;
+}
+
+.texts.default .account {
   font-size: 13px !important;
 }
 </style>

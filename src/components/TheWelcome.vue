@@ -61,16 +61,16 @@ function handleScroll() {
     ><Information />
   </CardItem> -->
 
+  <CardItem element-ref="card3" title="Location" description="오시는 길">
+    <Location :type="props.type" />
+  </CardItem>
+
   <CardItem
     element-ref="card2"
     title="For Your Heart"
     description="마음 전하실 곳"
   >
     <ForYourHeart :type="props.type" />
-  </CardItem>
-
-  <CardItem element-ref="card3" title="Location" description="오시는 길">
-    <Location :type="props.type" />
   </CardItem>
 
   <CardItem

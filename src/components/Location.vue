@@ -56,7 +56,7 @@ const props = defineProps({
 
 .location_copy, .text_locations .text {
   font-family: "Nanum Myeongjo", serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .btn_locations .text {

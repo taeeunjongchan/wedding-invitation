@@ -88,7 +88,7 @@ let description =
 
 .names em {
   font-style: normal;
-  font-size: 18px;
+  font-size: 15px;
   color: var(--vt-c-black-mute);
 }
 </style>
