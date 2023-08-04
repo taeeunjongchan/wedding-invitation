@@ -37,7 +37,7 @@ const albumCounts = props.type === 'default' ? Array.from({length: 20}, (v, k) =
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* row-gap: 4px; */
+  row-gap: 4px;
   column-gap: 4px;
 }
 .albums .picture {
@@ -46,6 +46,9 @@ const albumCounts = props.type === 'default' ? Array.from({length: 20}, (v, k) =
   border-radius: 3px;
   transition: 0.7s all;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .albums img {
