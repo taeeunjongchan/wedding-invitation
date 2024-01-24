@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import KakaoMap from "./atom/KakaoMap.vue";
+import NaverMap from "./atom/NaverMap.vue"
 import LocationButton from "./atom/LocationButton.vue";
 import LocationText from "./atom/LocationText.vue";
 import TextCopy from "./atom/TextCopy.vue";
@@ -9,37 +10,40 @@ const props = defineProps({
 </script>
 
 <template>
-  <KakaoMap />
-  <TextCopy :class="['location_copy', type]" copy-text="서울특별시 서초구 반포대로 235">
+<!--  <KakaoMap />-->
+  <NaverMap />
+  <TextCopy :class="['location_copy', type]" copy-text="서울 강남구 논현로 549">
     <slot>
-      <p>서울특별시 서초구 반포대로 235, LL층</p>
-      <p>아펠가모 반포</p>
+      <p>서울 강남구 논현로 549, 6층(라포레홀)</p>
+      <p>더채플앳 논현</p>
     </slot>
   </TextCopy>
   <div :class="['btn_locations', type]">
-    <LocationButton type="naver" link="https://naver.me/xM2E86s2"
+    <LocationButton type="naver" link="https://naver.me/x50l2R6q"
       ><span class="text">네이버지도</span></LocationButton
     >
-    <LocationButton type="kakao" link="http://kko.to/hdV-T0HnHP"
+    <LocationButton type="kakao" link="https://kko.to/cPAMMZ-msB"
       ><span class="text">카카오맵</span></LocationButton
     >
-    <LocationButton type="tmap" link="https://surl.tmobiapi.com/bb86b4c4"
+    <LocationButton type="tmap" link="https://surl.tmobiapi.com/3bcac752"
       ><span class="text">티맵</span></LocationButton
     >
   </div>
   <div :class="['text_locations', type]">
     <LocationText title="지하철">
-      <p class="text">고속터미널역 3·5·7호선 5번 출구</p>
-      <p class="text">서래공원 방면 신호등 건넌 후 첫번째 건물</p>
+      <p class="text">언주역(9호선) 7번 출구에서 도보 2분</p>
+      <p class="text">삼성역(2호선) 6번 출구에서 도보 10분</p>
     </LocationText>
     <LocationText title="버스">
-      <p class="text">간선 | 405, 740</p>
-      <p class="text">지선 | 5413</p>
-      <p class="text">서울 지방 조달청역 하차</p>
+      <p class="text">차병원(역삼역 방면) 정류장 하차 시 도보 1분</p>
+      <p class="text">간선 | 147, 463</p>
+      <p class="text">지선 | 3412, 4211</p>
+      <p class="text">직행버스 | 3600, 9600</p>
     </LocationText>
     <LocationText title="주차">
-      <p class="text">반포효성빌딩 지하주차장</p>
-      <p class="text">이용 시 주차 2시간 제공</p>
+      <p class="text">자차 이용 시, 식장에서 발렛으로 주차를 도와드립니다.</p>
+      <p class="text">외부 주차장 발렛의 경우, 식장 앞 셔틀을 이용해 주차된 곳까지 모셔드립니다.</p>
+      <p class="text">※ 내부 주차장 1시간 30분 무료, 외부 주차장 2시간 30분 무료</p>
     </LocationText>
   </div>
 </template>

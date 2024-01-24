@@ -3,6 +3,9 @@
 </template>
 
 <script>
+
+// https://jisoo-log.tistory.com/12
+
 export default {
   mounted() {
     if (window.kakao && window.kakao.maps) {

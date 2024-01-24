@@ -32,7 +32,7 @@ function getImageUrl() {
   flex-grow: 1;
   flex-basis: min-content;
   justify-content: center;
-  background-color: var(--vt-c-beige-soft);
+  background-color: #f2eee6;
   padding: 10px;
   color: var(--vt-c-black-soft);
 }

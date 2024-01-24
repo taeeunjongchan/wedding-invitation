@@ -47,14 +47,13 @@ function handleScroll() {
   <MainComment :type="props.type" />
 
   <CardItem
-    v-if="type === 'default'"
     element-ref="card0"
     title="Gallery"
-    description="제주도 촬영"
+    description=""
     :wide="true"
   >
     <Albums :type="props.type" />
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/NFadV6-FVjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<!--    <iframe width="560" height="315" src="https://www.youtube.com/embed/gQVlwIBouco?si=WhG2sD2PbDGipBf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
   </CardItem>
 
   <!-- <CardItem element-ref="card1" title="Information" description="예식 안내"
@@ -73,18 +72,6 @@ function handleScroll() {
     <ForYourHeart :type="props.type" />
   </CardItem>
 
-  <CardItem
-    v-if="type !== 'default'"
-    element-ref="card0"
-    title="Gallery"
-    description="제주도 촬영"
-    :wide="true"
-    :style="{paddingBottom: 0}"
-  >
-    <Albums :type="props.type" />
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/NFadV6-FVjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </CardItem>
-
   <Footer />
 </template>
 <style scoped>
@@ -98,8 +85,8 @@ iframe {
 
 @media (min-width: 580px) {
   iframe {
-    height: 100vh;        
     width: 100%;
+    height: 50vh;
   }
 }
 

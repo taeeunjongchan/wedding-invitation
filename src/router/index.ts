@@ -1,8 +1,8 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
@@ -13,19 +13,11 @@ const router = createRouter({
       },
     },
     {
-      path: "/parents-wonseon",
-      name: "parents-wonseon",
+      path: "/wedding",
+      name: "wedding",
       component: HomeView,
       props: {
-        type: "parents-wonseon",
-      },
-    },
-    {
-      path: "/parents-eunmi",
-      name: "parents-eunmi",
-      component: HomeView,
-      props: {
-        type: "parents-eunmi",
+        type: "wedding",
       },
     },
   ],

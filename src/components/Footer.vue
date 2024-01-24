@@ -4,7 +4,6 @@
     <div class="bg"></div>
     <div class="texts">
       <p class="title">THANKS TO</p>
-
       <div class="thanks_message">
         <p>
           사랑으로 키워주신 양가 부모님과<br />
@@ -41,7 +40,7 @@
   right: 0;
   height: 272px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
 }
 

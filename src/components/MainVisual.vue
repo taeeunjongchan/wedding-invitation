@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import img from "../assets/image/main.png";
+import img from "../assets/image/main.jpeg";
 const props = defineProps({
   type: String,
 });
@@ -8,18 +8,18 @@ const props = defineProps({
 <template>
   <div :class="['main_visual', props.type]">
     <img :src="img" />
-    <div class="titles">
-      <div class="subtitle">
-        <p>Wedding Invitation</p>
-      </div>
-      <div class="title">
-        <p>KIM EUNMI<br />YOO WONSEON</p>
-      </div>
-    </div>
-    <div class="bottom">
-      <small> 2023.09.03 PM 05:00<br /> </small>
-      <small>Apelgamo Banpo</small>
-    </div>
+<!--    <div class="titles">-->
+<!--      <div class="subtitle">-->
+<!--        <p>Wedding Invitation</p>-->
+<!--      </div>-->
+<!--      <div class="title">-->
+<!--        <p>KIM TAEEUN<br />LEE JONGCHAN</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="bottom">-->
+<!--      <small> 2024.03.31 AM 11:30<br /> </small>-->
+<!--      <small>The Chapel Nonhyeon</small>-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -29,13 +29,11 @@ const props = defineProps({
   font-family: "Nanum Myeongjo", serif;
   text-align: center;
   color: var(--vt-c-white);
-  min-height: 500px;
+  //min-height: 500px;
 }
 
 .main_visual img {
-  width: auto;
-  min-height: 500px;
-  max-height: 80vh;
+  width: 100%;
   transform: translateX(-50%);
   margin-left: 50%;
 }

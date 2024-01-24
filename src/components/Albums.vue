@@ -15,10 +15,10 @@ const showLayer = (index: number) => {
 }
 const closeLayer = () => showLayerImage.value = false;
 const pictureOf = (index: number, prefix: string) => {
-  return new URL(`/src/assets/image/albums/${prefix}${index}.png`, import.meta.url).href;
+  return new URL(`/src/assets/image/albums/${prefix}${index}.jpg`, import.meta.url).href;
 };
 
-const albumCounts = props.type === 'default' ? Array.from({length: 20}, (v, k) => k+1) : [2,3,4,6,8,9,13,15,17,18]
+const albumCounts = Array.from({length: 20}, (v, k) => k+1)
 </script>
 
 <template>
