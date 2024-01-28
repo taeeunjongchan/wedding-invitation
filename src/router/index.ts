@@ -20,6 +20,22 @@ const router = createRouter({
         type: "wedding",
       },
     },
+    {
+      path: "/parent-groom",
+      name: "parent-groom",
+      component: HomeView,
+      props: {
+        type: "parent-groom",
+      },
+    },
+    {
+      path: "/parent-bride",
+      name: "parent-bride",
+      component: HomeView,
+      props: {
+        type: "parent-bride",
+      },
+    },
   ],
 });
 

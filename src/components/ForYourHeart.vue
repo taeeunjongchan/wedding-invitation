@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <Accounts v-if="props.type !== 'wedding'">
+  <Accounts v-if="props.type === 'default'">
     <TextCopy class="text_copy" copy-text="110251658678">
       <slot>
         <div :class="['texts', type]">
@@ -36,7 +36,7 @@ const props = defineProps({
       </slot>
     </TextCopy>
   </Accounts>
-  <Accounts v-if="props.type !== 'wedding'">
+  <Accounts v-if="props.type === 'default'">
     <TextCopy :class="['text_copy', type]" copy-text="26881004385207">
       <slot>
         <div :class="['texts', type]">
@@ -64,6 +64,7 @@ const props = defineProps({
       </slot>
     </TextCopy>
   </Accounts>
+
   <Accounts v-if="props.type === 'wedding'">
     <TextCopy :class="['text_copy', type]" copy-text="110352902626">
       <slot>
@@ -79,6 +80,46 @@ const props = defineProps({
         <div :class="['texts', type]">
           <p>신부 <em>김태은</em></p>
           <p class="account">국민은행 665502-04-096934</p>
+        </div>
+      </slot>
+    </TextCopy>
+  </Accounts>
+
+  <Accounts v-if="props.type === 'parent-groom'">
+    <TextCopy class="text_copy" copy-text="110251658678">
+      <slot>
+        <div :class="['texts', type]">
+          <p><em>신랑 아버지 이영준</em></p>
+          <p class="account">신한은행 110-251-658678</p>
+        </div>
+      </slot>
+    </TextCopy>
+    <div class="divider" />
+    <TextCopy :class="['text_copy', type]" copy-text="38801410202001">
+      <slot>
+        <div :class="['texts', type]">
+          <p><em>신랑 어머니 임형신</em></p>
+          <p class="account">우리은행 388-014102-02-001</p>
+        </div>
+      </slot>
+    </TextCopy>
+  </Accounts>
+
+  <Accounts v-if="props.type === 'parent-bride'">
+    <TextCopy :class="['text_copy', type]" copy-text="26881004385207">
+      <slot>
+        <div :class="['texts', type]">
+          <p><em>신부 아버지 김인환</em></p>
+          <p class="account">하나은행 268-810043-85207</p>
+        </div>
+      </slot>
+    </TextCopy>
+    <div class="divider" />
+    <TextCopy :class="['text_copy', type]" copy-text="44600288116648">
+      <slot>
+        <div :class="['texts', type]">
+          <p><em>신부 어머니 이명숙</em></p>
+          <p class="account">국민은행 446002-88-116648</p>
         </div>
       </slot>
     </TextCopy>
